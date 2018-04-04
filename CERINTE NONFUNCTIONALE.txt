@@ -12,5 +12,5 @@ Database:
 	MySql
 Tests:
 	JUnit
-Dsing instrument:
+Desing instrument:
 	StarUML: pentru creearea claselor.

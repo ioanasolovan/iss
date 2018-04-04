@@ -1,0 +1,16 @@
+	Cerinte NONFUNCTIONALE
+IDEs:
+		Folosim IDE :InteliJ
+Frameworks:
+	Hibernate pe post de ORM
+	Spring
+Visual layout tool:
+	Folosim Scene builder pe post de visual editor al fisierelor fxml.
+Build instrument:
+	Folosim  Gradle pentru creearea proiectului si a fisierului jar final
+Database:
+	MySql
+Tests:
+	JUnit
+Dsing instrument:
+	StarUML: pentru creearea claselor.

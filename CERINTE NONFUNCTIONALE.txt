@@ -12,5 +12,5 @@ Database:
 	MySql
 Tests:
 	JUnit
-Desing instrument:
+Design tools:
 	StarUML: pentru creearea claselor.

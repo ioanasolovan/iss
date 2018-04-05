@@ -2,21 +2,29 @@ Cerinte Functionale
 
 ~Donatori~
 1.Autentificare Donatori
-	-Donatorii se pot inregistra prin completarea unui formular ce contine campuri precum Nume,Prenume,Data nasterii(zzllaa),Domiciliu,Localitate,Resedinta,Localitate,Date de contact(E-mail,Telefon)
+	-Donatorii se pot inregistra prin completarea unui formular ce contine campuri precum Nume,Prenume,Data nasterii(zz/ll/aa),Domiciliu,Localitate,Resedinta,Localitate,Date de contact(E-mail,Telefon)
 	-Donatorii deja inregistrati in sistem pot si care au donat pot vizualiza rezultatele analizelor medicale de la toate donarile de pana acum si perioada de timp peste care vor putea dona din nou.
 	-Un donator voluntar poate specifica numele pacinetului pentru care vrea sa doneze sange.
 
 ~Centrul de Transfuzii~
 2.Managementul donatorilor si al pungilor de sange
 	-Efectueaza prelevarea probelor de sange si trimite la laborator o parte din sangele donat in vederea efecutarii unor analize(Sangele se testeaza pentru boli precum :SIDA,HIV,TBC,sifilis, malarie,epilepsie,hepatita,diabet zaharat,cancer,ulcer etc).
-	-completeaza datele din timpul procesului de donare, precum si informatiile de pe parcursul traseului pungii de sange.
+	-Completeaza datele din timpul procesului de donare, precum si informatiile de pe parcursul traseului pungii de sange.
 	-Anunta donatorii atunci cand e nevoie de un anume tip de sange si softul ii ajuta sa decida donatorii care sunt cei mai apropiati geografic, compatibili din punct de vedere al grupei de sange si de asemenea intervalul de la ultima donare, le permite sa doneze.
 	-Actualizeaza stocul de sange.(Daca o punga de sange este pe drum in timp ce pacientul moare aceasta se reintoarce la centrul de la care a venit si poate fi refolosita).
+	-Daca doi pacienti au nevoie de acelasi sange,dar centrul de tranfuzie are sange disponibil doar pentru un pacient decizia se ia pe baza gravitatii cazului, gradul de urgenta fiind specificat in cererea initiata de catre medic.
+	-Daca doi pacienti au nevoie de sangesi acelasi grad de prioritate,centrul de sange are o cantitate limitata de sange compatibil cu pacientii,iar pentru niciunul dintre acestia nu s-au prezentat donatori atunci sangele disponibil de la centul merge la unul dintre cei doi paceinti si pentru celalalt se intiaza o cerere catre alt centru de transfuzie cat mai apropiat de spitalul in care este bolnavul.
 
 ~Medic~
 3.Initiere cerere
 	-Medicul completeaza o cerere pentru sangele necesar in spitalul de care apartin,cerere in care specifica pentru cine este nevoie de sange,grupa de sange si Rh-ul pacientului,gradul de urgenta(ridicat,mediu,scazut) impreuna cu locatia pacientului.
 	-Odata initiata o cerere medicul vede statusul cererii inintate si daca pentru un pacient au donat sau nu suficiente persoane.
-	-
+	-Medicul poate actulaiza/anula o cerere in cazul in care pacientul moare sau nu mai are nevoie de sange.
 
- 
+~Admin~
+4.Managementul Spitalelor,Centrelor de Transfuzii si a Donatorilor
+	-Adauga/Sterge/Actualizeaza un medic
+	-Adauga/Sterge/Actualizeaza un spital
+	-Adauga/Sterge/Actualizeaza un donator ?
+	-Adauga/Sterge/Actualizeaza un Centru de Transfuzie
+	

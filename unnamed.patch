@@ -1,0 +1,15 @@
+Index: CERINTE NONFUNCTIONALE.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- CERINTE NONFUNCTIONALE.txt	(revision 77a56e2b1a7f9aabb87cbccbd8219c2d320257d8)
++++ CERINTE NONFUNCTIONALE.txt	(date 1524299459787)
+@@ -4,6 +4,7 @@
+ Frameworks:
+ 	Hibernate pe post de ORM
+ 	Spring
++	Spring Remoting
+ Visual layout tool:
+ 	Folosim Scene builder pe post de visual editor al fisierelor fxml.
+ Build instrument:

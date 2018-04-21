@@ -4,7 +4,7 @@ IDEs:
 Frameworks:
 	Hibernate pe post de ORM
 	Spring
-	Spring Remoting
+	Spring Remoting.
 Visual layout tool:
 	Folosim Scene builder pe post de visual editor al fisierelor fxml.
 Build instrument:

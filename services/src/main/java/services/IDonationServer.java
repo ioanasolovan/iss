@@ -1,4 +1,4 @@
-package interfaces;
+package services;
 
 public interface IDonationServer {
 }

@@ -2,12 +2,10 @@ package service;
 
 import domain.Donor;
 import domain.DonorRequestForm;
-import interfaces.IDonationObserverServer;
-import interfaces.IDonationServer;
+import services.IDonationObserverServer;
+import services.IDonationServer;
 import observer.IDonationObservable;
 import observer.IDonationObserver;
-
-import java.util.*;
 
 /**
  * 

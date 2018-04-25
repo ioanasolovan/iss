@@ -1,12 +1,10 @@
 package service;
 
 import domain.Medic;
-import interfaces.IDonationObserverServer;
-import interfaces.IDonationServer;
+import services.IDonationObserverServer;
+import services.IDonationServer;
 import observer.IMedicObservable;
 import observer.IMedicObserver;
-
-import java.util.*;
 
 /**
  * 

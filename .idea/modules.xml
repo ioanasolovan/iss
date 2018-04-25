@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru.iml" filepath="$PROJECT_DIR$/.idea/modules/centru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru_main.iml" filepath="$PROJECT_DIR$/.idea/modules/centru_main.iml" group="centru" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru_test.iml" filepath="$PROJECT_DIR$/.idea/modules/centru_test.iml" group="centru" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor.iml" filepath="$PROJECT_DIR$/.idea/modules/donor.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_main.iml" group="donor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_test.iml" group="donor" />

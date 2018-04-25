@@ -6,99 +6,40 @@ import java.util.*;
  * 
  */
 public class Pacient {
-
-    /**
-     * Default constructor
-     */
-    public Pacient() {
-    }
-
-    /**
-     * 
-     */
-    private int id;
-
-    /**
-     * 
-     */
+    private Integer id;
     private String nume;
-
-    /**
-     * 
-     */
     private String prenume;
+    private String cnp;
 
-    /**
-     * 
-     */
-    private string cnp;
-
-    /**
-     * @return
-     */
-    public int getId() {
-        // TODO implement here
-        return 0;
+    public Integer getId() {
+        return id;
     }
 
-    /**
-     * @return
-     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getNume() {
-        // TODO implement here
-        return "";
+        return nume;
     }
 
-    /**
-     * @return
-     */
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
     public String getPrenume() {
-        // TODO implement here
-        return "";
+        return prenume;
     }
 
-    /**
-     * @return
-     */
+    public void setPrenume(String prenume) {
+        this.prenume = prenume;
+    }
+
     public String getCnp() {
-        // TODO implement here
-        return "";
+        return cnp;
     }
 
-    /**
-     * @param value 
-     * @return
-     */
-    public void setId(int value) {
-        // TODO implement here
-        return null;
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
     }
-
-    /**
-     * @param value 
-     * @return
-     */
-    public void setNume(String value) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @param value 
-     * @return
-     */
-    public void setPrenume(String value) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @param value 
-     * @return
-     */
-    public void setCnp(String value) {
-        // TODO implement here
-        return null;
-    }
-
 }

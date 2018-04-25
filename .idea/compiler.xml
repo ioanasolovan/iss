@@ -6,6 +6,8 @@
       <module name="donor_test" target="1.8" />
       <module name="interfaces_main" target="1.8" />
       <module name="interfaces_test" target="1.8" />
+      <module name="medic_main" target="1.8" />
+      <module name="medic_test" target="1.8" />
       <module name="model_main" target="1.8" />
       <module name="model_test" target="1.8" />
       <module name="services_main" target="1.8" />

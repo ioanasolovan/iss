@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_main.iml" group="donor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_test.iml" group="donor" />
       <module fileurl="file://$PROJECT_DIR$/iss.iml" filepath="$PROJECT_DIR$/iss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic.iml" filepath="$PROJECT_DIR$/.idea/modules/medic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/medic_main.iml" group="medic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/medic_test.iml" group="medic" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/model.iml" filepath="$PROJECT_DIR$/.idea/modules/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_main.iml" filepath="$PROJECT_DIR$/.idea/modules/model_main.iml" group="model" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_test.iml" filepath="$PROJECT_DIR$/.idea/modules/model_test.iml" group="model" />

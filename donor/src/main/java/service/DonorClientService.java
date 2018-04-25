@@ -92,7 +92,7 @@ public class DonorClientService implements IDonationObserver, IDonationObservabl
     }
 
     @Override
-    public void notifyDonorFromServer() {
+    public void notifyFromServer() {
 
     }
 

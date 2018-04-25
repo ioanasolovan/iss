@@ -10,6 +10,6 @@ public interface IDonationObserverServer {
     /**
      * 
      */
-    public void notifyDonorFromServer();
+    public void notifyFromServer();
 
 }

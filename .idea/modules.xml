@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/administrator.iml" filepath="$PROJECT_DIR$/.idea/modules/administrator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/administrator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/administrator_main.iml" group="administrator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/administrator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/administrator_test.iml" group="administrator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru.iml" filepath="$PROJECT_DIR$/.idea/modules/centru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru_main.iml" filepath="$PROJECT_DIR$/.idea/modules/centru_main.iml" group="centru" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centru_test.iml" filepath="$PROJECT_DIR$/.idea/modules/centru_test.iml" group="centru" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor.iml" filepath="$PROJECT_DIR$/.idea/modules/donor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_main.iml" group="donor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/donor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/donor_test.iml" group="donor" />
+      <module fileurl="file://$PROJECT_DIR$/iss.iml" filepath="$PROJECT_DIR$/iss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic.iml" filepath="$PROJECT_DIR$/.idea/modules/medic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/medic_main.iml" group="medic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/medic_test.iml" group="medic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model.iml" filepath="$PROJECT_DIR$/.idea/modules/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_main.iml" filepath="$PROJECT_DIR$/.idea/modules/model_main.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_test.iml" filepath="$PROJECT_DIR$/.idea/modules/model_test.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services.iml" filepath="$PROJECT_DIR$/.idea/modules/services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services_main.iml" filepath="$PROJECT_DIR$/.idea/modules/services_main.iml" group="services" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services_test.iml" filepath="$PROJECT_DIR$/.idea/modules/services_test.iml" group="services" />
+    </modules>
+  </component>
+</project>

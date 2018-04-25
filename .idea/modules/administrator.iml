@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="administrator" external.linked.project.path="$MODULE_DIR$/../../administrator" external.root.project.path="$MODULE_DIR$/../../administrator" external.system.id="GRADLE" external.system.module.group="donation" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../administrator">
+      <excludeFolder url="file://$MODULE_DIR$/../../administrator/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../administrator/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../administrator/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

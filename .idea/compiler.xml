@@ -2,20 +2,72 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="administrator1_main" target="1.8" />
+      <module name="administrator1_test" target="1.8" />
       <module name="administrator_main" target="1.8" />
       <module name="administrator_test" target="1.8" />
+      <module name="centru1_main" target="1.8" />
+      <module name="centru1_test" target="1.8" />
       <module name="centru_main" target="1.8" />
       <module name="centru_test" target="1.8" />
+      <module name="code-administrator_main" target="1.8" />
+      <module name="code-administrator_test" target="1.8" />
+      <module name="code-centru_main" target="1.8" />
+      <module name="code-centru_test" target="1.8" />
+      <module name="code-donor_main" target="1.8" />
+      <module name="code-donor_test" target="1.8" />
+      <module name="code-medic_main" target="1.8" />
+      <module name="code-medic_test" target="1.8" />
+      <module name="code-model_main" target="1.8" />
+      <module name="code-model_test" target="1.8" />
+      <module name="code-services_main" target="1.8" />
+      <module name="code-services_test" target="1.8" />
+      <module name="code_main" target="1.8" />
+      <module name="code_test" target="1.8" />
+      <module name="donor1_main" target="1.8" />
+      <module name="donor1_test" target="1.8" />
       <module name="donor_main" target="1.8" />
       <module name="donor_test" target="1.8" />
       <module name="interfaces_main" target="1.8" />
       <module name="interfaces_test" target="1.8" />
+      <module name="medic1_main" target="1.8" />
+      <module name="medic1_test" target="1.8" />
       <module name="medic_main" target="1.8" />
       <module name="medic_test" target="1.8" />
+      <module name="model1_main" target="1.8" />
+      <module name="model1_test" target="1.8" />
       <module name="model_main" target="1.8" />
       <module name="model_test" target="1.8" />
+      <module name="persistence1_main" target="1.8" />
+      <module name="persistence1_test" target="1.8" />
+      <module name="persistence_main" target="1.8" />
+      <module name="persistence_test" target="1.8" />
+      <module name="server1_main" target="1.8" />
+      <module name="server1_test" target="1.8" />
+      <module name="server_main" target="1.8" />
+      <module name="server_test" target="1.8" />
+      <module name="services1_main" target="1.8" />
+      <module name="services1_test" target="1.8" />
       <module name="services_main" target="1.8" />
       <module name="services_test" target="1.8" />
+      <module name="source-administrator_main" target="1.8" />
+      <module name="source-administrator_test" target="1.8" />
+      <module name="source-centru_main" target="1.8" />
+      <module name="source-centru_test" target="1.8" />
+      <module name="source-donor_main" target="1.8" />
+      <module name="source-donor_test" target="1.8" />
+      <module name="source-medic_main" target="1.8" />
+      <module name="source-medic_test" target="1.8" />
+      <module name="source-model_main" target="1.8" />
+      <module name="source-model_test" target="1.8" />
+      <module name="source-persistence_main" target="1.8" />
+      <module name="source-persistence_test" target="1.8" />
+      <module name="source-server_main" target="1.8" />
+      <module name="source-server_test" target="1.8" />
+      <module name="source-services_main" target="1.8" />
+      <module name="source-services_test" target="1.8" />
+      <module name="source_main" target="1.8" />
+      <module name="source_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

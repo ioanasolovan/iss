@@ -1,0 +1,11 @@
+rootProject.name = 'source'
+include 'donor'
+include 'model'
+include 'persistence'
+include 'services'
+include 'server'
+include 'administrator'
+include 'centru'
+include 'centru'
+include 'medic'
+

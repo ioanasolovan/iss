@@ -5,8 +5,6 @@ import domain.grupaSangeType;
 import observer.ICentruObserver;
 import service.CentruClientService;
 
-import java.util.*;
-
 /**
  * 
  */

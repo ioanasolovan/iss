@@ -2,45 +2,33 @@ package service;
 
 import domain.Donor;
 import domain.DonorRequestForm;
-import services.IDonationObserverServer;
-import services.IDonationServer;
 import observer.IDonationObservable;
 import observer.IDonationObserver;
+import services.IDonationObserverServer;
+import services.IDonationServer;
+
+import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  * 
  */
-public class DonorClientService implements IDonationObserver, IDonationObservable, IDonationObserverServer {
-
-    /**
-     * Default constructor
-     */
-    public DonorClientService() {
-    }
-
-    /**
-     * 
-     */
+public class DonorClientService extends UnicastRemoteObject implements IDonationObservable, IDonationObserverServer,Serializable {
     private IDonationServer server;
-
-    /**
-     * 
-     */
     private Donor user;
 
-    /**
-     * @param username 
-     * @param password
-     */
-    public void login(String username, String password) {
-        // TODO implement here
+
+    public DonorClientService(IDonationServer server)  throws RemoteException {
+        this.server = server;
     }
 
-    /**
-     * @param username 
-     * @param password 
-     * @param email
-     */
+    public boolean login(String username, String password) {
+        Donor donor = new Donor(username,password);
+        return server.login(donor , this);
+    }
+
     public void register(String username, String password, String email) {
         // TODO implement here
     }
@@ -66,36 +54,23 @@ public class DonorClientService implements IDonationObserver, IDonationObservabl
         // TODO implement here
     }
 
-
-
-    /**
-     * @param observer
-     */
+    @Override
     public void addObserver(IDonationObserver observer) {
-        // TODO implement here
+
     }
 
-    /**
-     * @param observer
-     */
+    @Override
     public void removeObserver(IDonationObserver observer) {
-        // TODO implement here
+
     }
 
-    /**
-     * 
-     */
+    @Override
     public void NotifyObservers() {
-        // TODO implement here
+
     }
 
     @Override
     public void notifyFromServer() {
-
-    }
-
-    @Override
-    public void notifyDonor() {
 
     }
 }

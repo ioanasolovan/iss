@@ -3,8 +3,6 @@ package controllers;
 import observer.IDonationObserver;
 import service.DonorClientService;
 
-import java.util.*;
-
 /**
  * 
  */

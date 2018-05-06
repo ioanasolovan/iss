@@ -3,8 +3,6 @@ package controllers;
 import observer.IAdministratorObserver;
 import service.AdminService;
 
-import java.util.*;
-
 /**
  * 
  */

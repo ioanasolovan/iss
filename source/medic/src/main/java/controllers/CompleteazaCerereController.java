@@ -3,8 +3,6 @@ package controllers;
 import observer.IMedicObserver;
 import service.MedicClientService;
 
-import java.util.*;
-
 /**
  * 
  */

@@ -1,22 +1,23 @@
 package controllers;
 
-import service.MedicClientService;
+import service.DoctorClientService;
 
 /**
  * 
  */
-public class AutentificareController {
+public class AuthenticationController
+{
 
     /**
      * Default constructor
      */
-    public AutentificareController() {
+    public AuthenticationController() {
     }
 
     /**
      * 
      */
-    private MedicClientService medicController;
+    private DoctorClientService medicController;
 
     /**
      * @return
@@ -38,7 +39,7 @@ public class AutentificareController {
      * @param service 
      * @return
      */
-    public void setClientService(MedicClientService service) {
+    public void setClientService(DoctorClientService service) {
         // TODO implement here
 
     }

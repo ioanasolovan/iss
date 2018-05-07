@@ -24,7 +24,7 @@ public class CentruClientService {
     /**
      * 
      */
-    private Medic user;
+    private Doctor user;
 
     /**
      * @param username 
@@ -50,18 +50,18 @@ public class CentruClientService {
     /**
      * @return
      */
-    public List<Pacient> getPacienti() {
+    public List<Patient> getPatienti() {
         // TODO implement here
         return null;
     }
 
 
-    public void notificaDonatori(grupaSangeType g, String rh) {
+    public void notificaDonatori(BloodBag g, String rh) {
         // TODO implement here
     }
 
 
-    public Pacient decideIntrePacienti() {
+    public Patient decideIntrePatienti() {
         // TODO implement here
         return null;
     }
@@ -74,11 +74,11 @@ public class CentruClientService {
     }
 
 
-    public void deleteFromStocSange( Punga p) {
+    public void deleteFromStocSange( BloodBag p) {
         // TODO implement here
     }
 
-    public void addStocSange(Punga p) {
+    public void addStocSange(BloodBag p) {
         // TODO implement here
     }
 

@@ -10,14 +10,38 @@ public class Address implements Serializable {
     private String secondaryAddress;
     private String secondaryCity;
     private String secondaryCounty;
-    private Donor donor;
 
-    public Donor getDonor() {
-        return donor;
+    public Address(Integer id)
+    {
+        this.id = id;
     }
 
-    public void setDonor(Donor donor) {
-        this.donor = donor;
+    public Address()
+    {
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Address{" +
+                "id=" + id +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", secondaryAddress='" + secondaryAddress + '\'' +
+                ", secondaryCity='" + secondaryCity + '\'' +
+                ", secondaryCounty='" + secondaryCounty + '\'' +
+                '}';
+    }
+
+    public Address(String address, String city, String county, String secondaryAddress, String secondaryCity, String secondaryCounty)
+    {
+        this.address = address;
+        this.city = city;
+        this.county = county;
+        this.secondaryAddress = secondaryAddress;
+        this.secondaryCity = secondaryCity;
+        this.secondaryCounty = secondaryCounty;
     }
 
     public Integer getId() {

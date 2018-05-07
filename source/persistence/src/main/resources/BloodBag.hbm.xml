@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.BloodBag" table="bloodBag">
+        <id name="id" column="id"><generator class="identity"></generator></id>
+        <property name="rh" column="rh"></property>
+        <property name="bloodType" column="bloodType">
+            <type name="domain.BloodType">
+                <param name="BloodType">Domain.BloodType</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+        <property name="thrombocytes" column="thrombovytes"></property>
+        <property name="leukocytes" column="leukocytes"></property>
+        <property name="redCells" column="redCells"></property>
+        <property name="plasma" column="plasma" ></property>
+
+    </class>
+</hibernate-mapping>

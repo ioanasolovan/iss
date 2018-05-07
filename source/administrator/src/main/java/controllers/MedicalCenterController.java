@@ -1,18 +1,19 @@
 package controllers;
 
-import domain.Centru;
+import domain.MedicalCenter;
 import observer.IAdministratorObserver;
 import service.AdminService;
 
 /**
  * 
  */
-public class CentruTrasfuziiController implements IAdministratorObserver {
+public class MedicalCenterController implements IAdministratorObserver
+{
 
     /**
      * Default constructor
      */
-    public CentruTrasfuziiController() {
+    public MedicalCenterController() {
     }
 
     /**
@@ -27,14 +28,14 @@ public class CentruTrasfuziiController implements IAdministratorObserver {
     /**
      * @param centru
      */
-    public void deleteCentruTransfuzii(Centru centru) {
+    public void deleteMedicalCenterTransfuzii(MedicalCenter centru) {
         // TODO implement here
     }
 
     /**
      * @param centru
      */
-    public void updateCentruTransfuzii(Centru centru) {
+    public void updateMedicalCenterTransfuzii(MedicalCenter centru) {
         // TODO implement here
     }
 
@@ -42,7 +43,7 @@ public class CentruTrasfuziiController implements IAdministratorObserver {
      * @param centru 
      * @return
      */
-    public boolean validareContCentru(Centru centru) {
+    public boolean validareContMedicalCenter(MedicalCenter centru) {
         // TODO implement here
         return false;
     }

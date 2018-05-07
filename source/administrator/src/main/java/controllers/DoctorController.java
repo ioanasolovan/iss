@@ -1,18 +1,18 @@
 package controllers;
 
-import domain.Medic;
+import domain.Doctor;
 import observer.IAdministratorObserver;
 import service.AdminService;
 
 /**
  * 
  */
-public class MedicController implements IAdministratorObserver {
+public class DoctorController implements IAdministratorObserver {
 
     /**
      * Default constructor
      */
-    public MedicController() {
+    public DoctorController() {
     }
 
     /**
@@ -21,19 +21,22 @@ public class MedicController implements IAdministratorObserver {
     public AdminService service;
 
 
-
+    public DoctorController(AdminService service)
+    {
+        this.service = service;
+    }
 
     /**
      * @param medic
      */
-    public void deleteMedic(Medic medic) {
+    public void deleteDoctor(Doctor medic) {
         // TODO implement here
     }
 
     /**
      * @param medic
      */
-    public void updateMedic(Medic medic) {
+    public void updateDoctor(Doctor medic) {
         // TODO implement here
     }
 
@@ -41,7 +44,7 @@ public class MedicController implements IAdministratorObserver {
      * @param medic 
      * @return
      */
-    public boolean validareConMedic(Medic medic) {
+    public boolean validareConDoctor(Doctor medic) {
         // TODO implement here
         return false;
     }

@@ -3,44 +3,54 @@ package repository;
 import domain.Address;
 import org.hibernate.SessionFactory;
 
-public class AddressRepository implements IAddressRepository {
-    private SessionFactory factory;
+public class AddressRepository extends AbstractRepository<Integer, Address> implements IRepository<Integer, Address>
+{
 
-    public SessionFactory getFactory() {
-        return factory;
-    }
-
-    public void setFactory(SessionFactory factory) {
-        this.factory = factory;
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public void save(Address entity) {
+    public AddressRepository()
+    {
 
     }
 
     @Override
-    public void delete(Integer integer) {
-
+    public int size() throws RepositoryException
+    {
+        return sizeGeneric("Address");
     }
 
     @Override
-    public void update(Integer integer, Address entity) {
-
+    public void save(Address entity) throws RepositoryException
+    {
+        saveGeneric(entity);
     }
 
     @Override
-    public Address findOne(Integer integer) {
-        return null;
+    public void delete(Integer integer) throws RepositoryException
+    {
+        deleteGeneric(new Address(integer));
     }
 
     @Override
-    public Iterable<Address> findAll() {
-        return null;
+    public void update( Address entity) throws RepositoryException
+    {
+        updateGeneric(entity);
     }
+
+    @Override
+    public Address findOne(Integer integer) throws RepositoryException
+    {
+        return findOneGeneric(integer, Address.class);
+    }
+
+    @Override
+    public Iterable<Address> findAll() throws RepositoryException
+    {
+        return findAllGeneric("Address");
+    }
+
+    @Override
+    public void setFactory(SessionFactory factory)
+    {
+        super.setFactory(factory);
+    }
+
 }

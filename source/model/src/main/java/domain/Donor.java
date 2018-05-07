@@ -1,17 +1,63 @@
 package domain;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 
-public class Donor implements Serializable {
+public class Donor implements Serializable
+{
+    private String username;
     private String firstname;
     private String lastname;
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
     private String email;
     private String phone;
-    private boolean firstTimeLogged;
-    private String username;
+    private Boolean firstTimeLogged;
     private String password;
+    private Address address;
+
+    public Boolean getFirstTimeLogged()
+    {
+        return firstTimeLogged;
+    }
+
+    public void setFirstTimeLogged(Boolean firstTimeLogged)
+    {
+        this.firstTimeLogged = firstTimeLogged;
+    }
+
+    public Address getAddress()
+    {
+        return address;
+    }
+
+    public void setAddress(Address address)
+    {
+        this.address = address;
+    }
+
+
+
+    public Donor()
+    {
+    }
+
+    public Donor(String username, String firstname, String lastname, Date dateOfBirth, String email, String phone, Boolean firstTimeLogged, String password, Address address)
+    {
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.dateOfBirth = dateOfBirth;
+        this.email = email;
+        this.phone = phone;
+        this.firstTimeLogged = firstTimeLogged;
+        this.password = password;
+        this.address=address;
+    }
+
+    public Donor(String username)
+    {
+        this.username = username;
+    }
 
     public Donor(String username, String password) {
         this.username = username;
@@ -43,11 +89,11 @@ public class Donor implements Serializable {
         this.lastname = lastname;
     }
 
-    public LocalDate getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -67,9 +113,6 @@ public class Donor implements Serializable {
         this.phone = phone;
     }
 
-    public boolean isFirstTimeLogged() {
-        return firstTimeLogged;
-    }
 
     public void setFirstTimeLogged(boolean firstTimeLogged) {
         this.firstTimeLogged = firstTimeLogged;
@@ -83,11 +126,19 @@ public class Donor implements Serializable {
         this.username = username;
     }
 
-    public String getPasssord() {
-        return password;
-    }
-
-    public void setPasssord(String password) {
-        this.password = password;
+    @Override
+    public String toString()
+    {
+        return "Donor{" +
+                "username='" + username + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", firstTimeLogged=" + firstTimeLogged +
+                ", password='" + password + '\'' +
+                ", address=" + address +
+                '}';
     }
 }

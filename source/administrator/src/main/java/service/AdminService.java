@@ -1,8 +1,8 @@
 package service;
 
 import domain.Administrator;
-import domain.Centru;
-import domain.Medic;
+import domain.Doctor;
+import domain.MedicalCenter;
 import observer.IAdminObservable;
 import observer.IAdministratorObserver;
 import services.IDonationObserverServer;
@@ -42,42 +42,42 @@ public class AdminService implements IDonationObserverServer, IAdminObservable {
     /**
      * @param medic
      */
-    public void validareContMedic(Medic medic) {
+    public void validareContDoctor(Doctor medic) {
         // TODO implement here
     }
 
     /**
      * @param medic
      */
-    public void deleteMedic(Medic medic) {
+    public void deleteDoctor(Doctor medic) {
         // TODO implement here
     }
 
     /**
      * @param medic
      */
-    public void updateMedic(Medic medic) {
+    public void updateDoctor(Doctor medic) {
         // TODO implement here
     }
 
     /**
      * @param centru
      */
-    public void validateContCentru(Centru centru) {
+    public void validateContMedicalCenter(MedicalCenter centru) {
         // TODO implement here
     }
 
     /**
      * @param centru
      */
-    public void deleteCentru(Centru centru) {
+    public void deleteMedicalCenter(MedicalCenter centru) {
         // TODO implement here
     }
 
     /**
      * @param centru
      */
-    public void updateCentru(Centru centru) {
+    public void updateMedicalCenter(MedicalCenter centru) {
         // TODO implement here
     }
 

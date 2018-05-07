@@ -1,10 +1,16 @@
 package repository;
 
-public interface IRepository<ID, T> {
-    int size();
-    void save(T entity);
-    void delete(ID id);
-    void update(ID id, T entity);
-    T findOne(ID id);
-    Iterable<T> findAll();
+import org.hibernate.SessionFactory;
+
+public interface IRepository<ID, T>
+{
+
+    int size() throws RepositoryException;
+    void save(T entity) throws RepositoryException;
+    void delete(ID id) throws RepositoryException;
+    void update(T entity) throws RepositoryException;
+    T findOne(ID id) throws RepositoryException;
+    Iterable<T> findAll() throws RepositoryException;
+    void setFactory(SessionFactory factory) ;
+
 }

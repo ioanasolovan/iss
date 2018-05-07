@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="domain.Donor" table="donor">
+        <id name="username" column="username">
+            <generator class="assigned"/>
+        </id>
+        <property name="firstname" type="string" column="firstname"/>
+        <property name="lastname" type="string" column="lastname"/>
+        <property name="dateOfBirth" type="date" column="dateOfBirth"/>
+        <property name="email" type="string" column="email"/>
+        <property name="phone" type="string" column="phone"/>
+        <property name="firstTimeLogged" type="boolean" column="firstTimeLogged"/>
+        <property name="password" type="string" column="password"/>
+        <many-to-one name="address"  column="adressId" class="domain.Address"
+                     not-null="true" cascade="none">
+
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>

@@ -1,7 +1,7 @@
 package controllers;
 
-import domain.Locatie;
-import domain.grupaSangeType;
+import domain.BloodType;
+import domain.Location;
 import observer.ICentruObserver;
 import service.CentruClientService;
 
@@ -50,7 +50,7 @@ public class DashboardController implements ICentruObserver {
 
     }
 
-    public void notificaDonatori(grupaSangeType g,  String rh, Locatie locatie) {
+    public void notificaDonatori(BloodType g, String rh, Location locatie) {
         // TODO implement here
     }
 

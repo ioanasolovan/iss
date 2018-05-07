@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Location" table="location">
+        <id name="id" column="id">
+            <generator class="identity"></generator>
+        </id>
+        <property name="address" column="adress"></property>
+        <property name="city" column="city"></property>
+        <property name="county" column="county"></property>
+
+
+    </class>
+</hibernate-mapping>

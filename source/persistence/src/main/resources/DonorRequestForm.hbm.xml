@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.DonorRequestForm" table="donorRequestForm">
+        <id name="id" column="id">
+            <generator class="identity"></generator>
+        </id>
+
+        <property name="firstName" column="firstName"></property>
+        <property name="lastName" column="lastName"></property>
+        <property name="dateOfBird" type="java.util.Date"  column="dateOfBirth"></property>
+        <many-to-one name="address"  column="adressId" class="domain.Address" not-null="true" cascade="none">
+
+        </many-to-one>
+        <property name="additionalData" column="additionalData"></property>
+        <property name="phone" column="phone"></property>
+        <property name="email" column="email"></property>
+        <property name="username" column="username"></property>
+
+
+    </class>
+</hibernate-mapping>

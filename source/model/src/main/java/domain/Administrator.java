@@ -1,14 +1,45 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * 
  */
-public class Administrator {
+public class Administrator implements Serializable
+{
 
     private String firstName;
     private String lastName;
     private String email;
-    private String parola;
+    private String password;
+
+    public Administrator()
+    {
+    }
+
+    public Administrator(String firstName, String lastName, String email, String password)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Administrator{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+    public Administrator(String email)
+    {
+        this.email = email;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -34,11 +65,11 @@ public class Administrator {
         this.email = email;
     }
 
-    public String getParola() {
-        return parola;
+    public String getPassword() {
+        return password;
     }
 
-    public void setParola(String parola) {
-        this.parola = parola;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

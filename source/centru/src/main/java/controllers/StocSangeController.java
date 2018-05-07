@@ -1,6 +1,6 @@
 package controllers;
 
-import domain.Punga;
+import domain.BloodBag;
 import observer.ICentruObserver;
 import service.CentruClientService;
 
@@ -18,12 +18,12 @@ public class StocSangeController implements ICentruObserver {
         // TODO implement here
     }
 
-    public void deleteFromStocSange( Punga p) {
+    public void deleteFromStocSange( BloodBag p) {
         // TODO implement here
     }
 
 
-    public void addStocSange( Punga p) {
+    public void addStocSange( BloodBag p) {
         // TODO implement here
     }
 

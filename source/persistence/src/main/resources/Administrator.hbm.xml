@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"                "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Administrator" table="administrator">
+        <id name="email" column="email">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="firstName" column="firstName"></property>
+        <property name="lastName" column="lastName"></property>
+        <property name="password" column="password"></property>
+
+
+    </class>
+</hibernate-mapping>

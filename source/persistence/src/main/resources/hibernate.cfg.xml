@@ -6,19 +6,33 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/tourism</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/donationcenter</property>
         <property name = "hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
 
-        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+        <property name="hibernate.hbm2ddl.auto"> create</property>
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <mapping resource="Donor.hbm.xml"/>
-        <mapping resource="Address.hbm.xml"/>
+        <mapping resource="Mapping/Donor.hbm.xml"></mapping>
+        <mapping resource="Mapping/Address.hbm.xml"></mapping>
+        <mapping resource="Mapping/Administrator.hbm.xml"></mapping>
+        <mapping resource="Mapping/BloodBag.hbm.xml"></mapping>
+        <mapping resource="Mapping/Doctor.hbm.xml"></mapping>
+        <mapping resource="Mapping/DonorRequestForm.hbm.xml"></mapping>
+        <mapping resource="Mapping/DoctorRequest.hbm.xml"></mapping>
+        <mapping resource="Mapping/Location.hbm.xml"></mapping>
+        <mapping resource="Mapping/MedicalCenter.hbm.xml"></mapping>
+        <mapping resource="Mapping/Patient.hbm.xml"></mapping>
+
 
 
     </session-factory>

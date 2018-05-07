@@ -1,7 +1,7 @@
 package controllers;
 
 import observer.IMedicObserver;
-import service.MedicClientService;
+import service.DoctorClientService;
 
 /**
  * 
@@ -17,13 +17,13 @@ public class VeziStatusPacientController implements IMedicObserver {
     /**
      * 
      */
-    private MedicClientService medicController;
+    private DoctorClientService medicController;
 
     /**
      * @param service 
      * @return
      */
-    public void setClientService(MedicClientService service) {
+    public void setClientService(DoctorClientService service) {
         // TODO implement here
 
     }

@@ -1,6 +1,6 @@
 package service;
 
-import domain.Medic;
+import domain.Doctor;
 import observer.IMedicObservable;
 import observer.IMedicObserver;
 import services.IDonationObserverServer;
@@ -9,7 +9,7 @@ import services.IDonationServer;
 /**
  * 
  */
-public class MedicClientService implements IMedicObservable , IDonationObserverServer {
+public class DoctorClientService implements IMedicObservable , IDonationObserverServer {
 
     @Override
     public void notifyFromServer() {
@@ -34,7 +34,7 @@ public class MedicClientService implements IMedicObservable , IDonationObserverS
     /**
      * Default constructor
      */
-    public MedicClientService() {
+    public DoctorClientService() {
     }
 
     /**
@@ -45,7 +45,7 @@ public class MedicClientService implements IMedicObservable , IDonationObserverS
     /**
      * 
      */
-    private Medic user;
+    private Doctor user;
 
     /**
      * @param username 

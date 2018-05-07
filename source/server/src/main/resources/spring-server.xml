@@ -7,12 +7,30 @@
 
     <bean id="donorRepository" class="repository.DonorRepository"/>
     <bean id="addressRepository" class="repository.AddressRepository"/>
+    <bean id="doctorRepository" class="repository.DoctorRepository"/>
+    <bean id="administratorRepository" class="repository.AdministratorRepository"/>
+    <bean id="doctorRequestRepository" class="repository.DoctorRequestRepository"/>
+    <bean id="patientRepository" class="repository.PatientRepository"/>
+    <bean id="bloodBagRepository" class="repository.BloodBagRepository"/>
+    <bean id="locationRepository" class="repository.LocationRepository"/>
+    <bean id="donorRequestFormRepository" class="repository.DonorRequestFormRepository"/>
+    <bean id="medicalCenterRepository" class="repository.MedicalCenterRepository"/>
+
 
 
 
     <bean id="donationService" class="servers.DonationServer">
         <constructor-arg ref="donorRepository"/>
         <constructor-arg ref="addressRepository"/>
+        <constructor-arg ref="doctorRepository"/>
+        <constructor-arg ref="administratorRepository"/>
+        <constructor-arg ref="doctorRequestRepository"/>
+        <constructor-arg ref="patientRepository"/>
+        <constructor-arg ref="bloodBagRepository"/>
+        <constructor-arg ref="locationRepository"/>
+        <constructor-arg ref="donorRequestFormRepository"/>
+        <constructor-arg ref="medicalCenterRepository"/>
+
 
     </bean>
 

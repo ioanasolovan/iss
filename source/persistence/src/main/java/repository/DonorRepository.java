@@ -20,9 +20,9 @@ public class DonorRepository extends AbstractRepository<String,Donor> implements
     }
 
     @Override
-    public void save(Donor entity)throws RepositoryException
+    public String save(Donor entity)throws RepositoryException
     {
-        saveGeneric(entity);
+      return  saveGeneric(entity);
     }
 
     @Override

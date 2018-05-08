@@ -13,9 +13,9 @@ public class DonorRequestFormRepository extends AbstractRepository<Integer, Dono
     }
 
     @Override
-    public void save(DonorRequestForm entity) throws RepositoryException
+    public Integer save(DonorRequestForm entity) throws RepositoryException
     {
-        saveGeneric(entity);
+       return saveGeneric(entity);
     }
 
     @Override

@@ -13,9 +13,9 @@ public class LocationRepository extends AbstractRepository<Integer, Location> im
     }
 
     @Override
-    public void save(Location entity) throws RepositoryException
+    public Integer save(Location entity) throws RepositoryException
     {
-        saveGeneric(entity);
+       return saveGeneric(entity);
     }
 
     @Override

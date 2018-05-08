@@ -13,9 +13,9 @@ public class BloodBagRepository extends AbstractRepository<Integer, BloodBag> im
     }
 
     @Override
-    public void save(BloodBag entity) throws RepositoryException
+    public Integer save(BloodBag entity) throws RepositoryException
     {
-        saveGeneric(entity);
+       return saveGeneric(entity);
     }
 
     @Override

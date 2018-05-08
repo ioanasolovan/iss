@@ -14,9 +14,9 @@ public class MedicalCenterRepository extends AbstractRepository<Integer, Medical
     }
 
     @Override
-    public void save(MedicalCenter entity) throws RepositoryException
+    public Integer save(MedicalCenter entity) throws RepositoryException
     {
-        saveGeneric(entity);
+        return saveGeneric(entity);
     }
 
     @Override

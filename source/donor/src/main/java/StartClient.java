@@ -29,7 +29,7 @@ public class StartClient extends Application {
             FXMLLoader loader;
             Parent root;
 
-            loader = new FXMLLoader(getClass().getResource("/login.fxml"));
+            loader = new FXMLLoader(getClass().getResource("/auth.fxml"));
             root = loader.load();
 
             AuthentificationController lc = loader.getController();

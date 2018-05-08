@@ -1,5 +1,6 @@
 package service;
 
+import domain.Address;
 import domain.Donor;
 import domain.DonorRequestForm;
 import observer.IDonationObservable;
@@ -26,6 +27,10 @@ public class DonorClientService extends UnicastRemoteObject implements IDonation
     public boolean login(String username, String password) {
         Donor donor = new Donor(username,password);
         return server.login(donor , this);
+    }
+    public Integer saveAddress(String address , String city , String county , String secondaryAddress , String secondaryCity , String secondaryCounty){
+        Address adr = new Address(address, city, county, secondaryAddress, secondaryCity, secondaryCounty);
+       return  server.saveAddress(adr);
     }
 
     public void register(String username, String password, String email) {
@@ -71,5 +76,13 @@ public class DonorClientService extends UnicastRemoteObject implements IDonation
     @Override
     public void notifyFromServer() {
 
+    }
+
+    public Address findAddress(Integer id) {
+       return  server.findAddress(id);
+    }
+
+    public void saveDonor(Donor donor) {
+        server.saveDonor(donor);
     }
 }

@@ -1,5 +1,6 @@
 package servers;
 
+import domain.Address;
 import domain.Donor;
 import domain.DonorRequestForm;
 import org.hibernate.SessionFactory;
@@ -10,6 +11,8 @@ import repository.*;
 import services.IDonationObserverServer;
 import services.IDonationServer;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,8 +33,7 @@ public class DonationServer implements IDonationServer {
     private static SessionFactory sessionFactory;
     private Map<String, IDonationObserverServer> loggedClients;
 
-    public DonationServer(DonorRepository donorRepository, AddressRepository addressRepository, DoctorRepository doctorRepository, AdministratorRepository administratorRepository, DoctorRequestRepository doctorRequestRepository, PatientRepository patientRepository, BloodBagRepository bloodBagRepository, LocationRepository locationRepository, DonorRequestFormRepository donorRequuestForm, MedicalCenterRepository medicalCenterRepository)
-    {
+    public DonationServer(DonorRepository donorRepository, AddressRepository addressRepository, DoctorRepository doctorRepository, AdministratorRepository administratorRepository, DoctorRequestRepository doctorRequestRepository, PatientRepository patientRepository, BloodBagRepository bloodBagRepository, LocationRepository locationRepository, DonorRequestFormRepository donorRequuestForm, MedicalCenterRepository medicalCenterRepository) {
         this.donorRepository = donorRepository;
         this.addressRepository = addressRepository;
         this.doctorRepository = doctorRepository;

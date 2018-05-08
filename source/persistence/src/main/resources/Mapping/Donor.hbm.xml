@@ -16,7 +16,7 @@
         <property name="firstTimeLogged" type="boolean" column="firstTimeLogged"/>
         <property name="password" type="string" column="password"/>
         <many-to-one name="address"  column="adressId" class="domain.Address"
-                     not-null="true" cascade="none">
+                     not-null="true" cascade="all">
 
         </many-to-one>
     </class>

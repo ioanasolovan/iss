@@ -16,9 +16,9 @@ public class AdministratorRepository extends AbstractRepository<String, Administ
     }
 
     @Override
-    public void save(Administrator entity) throws RepositoryException
+    public String save(Administrator entity) throws RepositoryException
     {
-        saveGeneric(entity);
+       return saveGeneric(entity);
     }
 
     @Override

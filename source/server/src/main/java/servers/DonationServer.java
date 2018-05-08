@@ -1,5 +1,6 @@
 package servers;
 
+import domain.Address;
 import domain.Donor;
 import domain.DonorRequestForm;
 import org.hibernate.SessionFactory;
@@ -10,6 +11,8 @@ import repository.*;
 import services.IDonationObserverServer;
 import services.IDonationServer;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,8 +33,7 @@ public class DonationServer implements IDonationServer {
     private static SessionFactory sessionFactory;
     private Map<String, IDonationObserverServer> loggedClients;
 
-    public DonationServer(DonorRepository donorRepository, AddressRepository addressRepository, DoctorRepository doctorRepository, AdministratorRepository administratorRepository, DoctorRequestRepository doctorRequestRepository, PatientRepository patientRepository, BloodBagRepository bloodBagRepository, LocationRepository locationRepository, DonorRequestFormRepository donorRequuestForm, MedicalCenterRepository medicalCenterRepository)
-    {
+    public DonationServer(DonorRepository donorRepository, AddressRepository addressRepository, DoctorRepository doctorRepository, AdministratorRepository administratorRepository, DoctorRequestRepository doctorRequestRepository, PatientRepository patientRepository, BloodBagRepository bloodBagRepository, LocationRepository locationRepository, DonorRequestFormRepository donorRequuestForm, MedicalCenterRepository medicalCenterRepository) {
         this.donorRepository = donorRepository;
         this.addressRepository = addressRepository;
         this.doctorRepository = doctorRepository;
@@ -77,13 +79,59 @@ public class DonationServer implements IDonationServer {
     @Override
     public boolean login(Object user, IDonationObserverServer client) {
         if(user instanceof Donor){
-            System.out.println("bla ,bla");
-            System.out.println(((Donor) user).getPassword());
-            return true;
+            try {
+                Donor donor = donorRepository.findOne( ((Donor) user).getUsername());
+                if(donor.getPassword().equals(((Donor) user).getPassword()))
+                    return true;
+            } catch (RepositoryException e) {
+                return false;
+            }
         }
 
 
         return false;
 
+    }
+
+    @Override
+    public boolean register(Object user) {
+        if(user instanceof Donor){
+            try {
+                donorRepository.save((Donor)user);
+                return true;
+            } catch (RepositoryException e) {
+                return false;
+            }
+        }
+
+        return false;
+    }
+
+    @Override
+    public Integer saveAddress(Address adr) {
+        try {
+            return addressRepository.save(adr);
+        } catch (RepositoryException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public Address findAddress(Integer id) {
+        try {
+            return addressRepository.findOne(id);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public void saveDonor(Donor donor) {
+        try {
+            donorRepository.save(donor);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
     }
 }

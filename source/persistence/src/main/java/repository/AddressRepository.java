@@ -18,9 +18,9 @@ public class AddressRepository extends AbstractRepository<Integer, Address> impl
     }
 
     @Override
-    public void save(Address entity) throws RepositoryException
+    public Integer save(Address entity) throws RepositoryException
     {
-        saveGeneric(entity);
+        return saveGeneric(entity);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import observer.ICentruObserver;
 import service.CentruClientService;
 
@@ -37,4 +38,5 @@ public class AuthentificationController implements ICentruObserver {
     public void notifyFromServer() {
 
     }
+
 }

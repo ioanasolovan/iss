@@ -5,7 +5,7 @@ public interface IRepositoryGeneric<ID, T> {
     int size() ;
 
 
-    void save(T entity) throws RepositoryException;
+    ID save(T entity) throws RepositoryException;
     void delete(T t) throws RepositoryException;
     void update(T t) throws RepositoryException;
     T findOne(ID id, Class<T> tClass) throws RepositoryException;

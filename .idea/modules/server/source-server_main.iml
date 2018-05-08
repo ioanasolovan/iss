@@ -18,9 +18,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="source-services_main" />
     <orderEntry type="module" module-name="source-persistence_main" />
     <orderEntry type="module" module-name="source-model_main" />
-    <orderEntry type="module" module-name="source-services_main" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jaxb:jaxb-xjc:2.2.11" level="project" />

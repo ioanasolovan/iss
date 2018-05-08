@@ -39,15 +39,16 @@ public class AbstractRepository<ID,T>
         return 0;
     }
 
-    protected void saveGeneric(T entity) throws RepositoryException
+    protected ID saveGeneric(T entity) throws RepositoryException
     {
         Transaction transaction=null;
-        try(Session session = factory.openSession())
-        {
+        try(Session session = factory.openSession()) {
 
-            transaction=session.beginTransaction();
-            session.save(entity);
+            transaction = session.beginTransaction();
+            ID key;
+            key = (ID) session.save(entity);
             transaction.commit();
+            return key;
         }
         catch (Exception e)
         {

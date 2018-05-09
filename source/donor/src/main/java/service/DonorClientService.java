@@ -11,6 +11,7 @@ import services.IDonationServer;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 /**
  * 
@@ -85,4 +86,18 @@ public class DonorClientService extends UnicastRemoteObject implements IDonation
     public void saveDonor(Donor donor) {
         server.saveDonor(donor);
     }
+
+    public Integer saveDonorRequestForm(DonorRequestForm form) {
+        return server.saveDonorRequestForm(form);
+    }
+
+    public List<DonorRequestForm> getAllDonorRequests(String username) {
+        return  server.getAllDonorRequestsByUsername(username);
+    }
+
+    public Iterable<DonorRequestForm> findAllDonorRequests() {
+        return server.getAllDonorRequests();
+
+    }
+
 }

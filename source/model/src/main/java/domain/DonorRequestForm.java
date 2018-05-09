@@ -15,7 +15,24 @@ public class DonorRequestForm implements Serializable
     private String email;
     private String phone;
     private String additionalData;
+    private DonorRequestStatus status;
+    private Date dateOfRequest;
 
+    public DonorRequestStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(DonorRequestStatus status) {
+        this.status = status;
+    }
+
+    public Date getDateOfRequest() {
+        return dateOfRequest;
+    }
+
+    public void setDateOfRequest(Date dateOfRequest) {
+        this.dateOfRequest = dateOfRequest;
+    }
 
     public DonorRequestForm(int id)
     {
@@ -46,16 +63,17 @@ public class DonorRequestForm implements Serializable
     {
     }
 
-    public DonorRequestForm(String firstName, String lastName,String username, Date dateOfBird, Address address, String email, String phone, String additionalData)
-    {
+    public DonorRequestForm(String firstName, String lastName, String username, Date dateOfBird, Address address, String email, String phone, String additionalData, DonorRequestStatus status, Date dateOfRequest) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.username=username;
+        this.username = username;
         this.dateOfBird = dateOfBird;
         this.address = address;
         this.email = email;
         this.phone = phone;
         this.additionalData = additionalData;
+        this.status = status;
+        this.dateOfRequest = dateOfRequest;
     }
 
     @Override

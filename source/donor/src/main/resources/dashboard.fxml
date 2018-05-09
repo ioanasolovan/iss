@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-3.0" prefHeight="70.0" prefWidth="907.0" style="-fx-background-color: #ff235d;" />
+      <AnchorPane layoutY="67.0" prefHeight="583.0" prefWidth="200.0" style="-fx-background-color: #ff235d;">
+         <children>
+            <Label fx:id="codeLabel" layoutX="53.0" layoutY="119.0" onMouseClicked="#donate" text="Donate" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="historyLabel" layoutX="53.0" layoutY="184.0" onMouseClicked="#history" text="History" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="updateLabel" layoutX="16.0" layoutY="248.0" onMouseClicked="#update" text="Update account" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="logoutLabel" layoutX="53.0" layoutY="312.0" onMouseClicked="#logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="63.0" text="Home"  textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sidePages" layoutX="200.0" layoutY="67.0" prefHeight="650.0" prefWidth="700.0" />
+   </children>
+</AnchorPane>

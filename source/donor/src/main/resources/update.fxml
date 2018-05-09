@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdatePersonalDataController">
+   <children>
+      <TextField fx:id="phone" layoutX="288.0" layoutY="116.0" prefHeight="25.0" prefWidth="224.0" promptText="Phone" />
+      <DatePicker fx:id="datePicker" layoutX="35.0" layoutY="165.0" prefHeight="25.0" prefWidth="224.0" promptText="Date of birth" />
+      <TextField fx:id="address" layoutX="24.0" layoutY="266.0" prefHeight="25.0" prefWidth="498.0" promptText="Address" />
+      <TextField fx:id="city" layoutX="24.0" layoutY="307.0" prefHeight="25.0" prefWidth="224.0" promptText="City" />
+      <TextField fx:id="county" layoutX="288.0" layoutY="307.0" prefHeight="25.0" prefWidth="233.0" promptText="Countty" />
+      <TextField fx:id="secAddress" layoutX="35.0" layoutY="412.0" prefHeight="25.0" prefWidth="498.0" promptText="Secondary Address" />
+      <TextField fx:id="secCity" layoutX="31.0" layoutY="460.0" prefHeight="25.0" prefWidth="224.0" promptText="Secondary city" />
+      <TextField fx:id="secCounty" layoutX="288.0" layoutY="460.0" prefHeight="25.0" prefWidth="247.0" promptText="Secondary county" />
+      <Text layoutX="24.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Optional details">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Address details">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Personal Data">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField layoutX="35.0" layoutY="116.0" prefHeight="25.0" prefWidth="224.0" promptText="Email" />
+      <TextField layoutX="35.0" layoutY="74.0" prefHeight="25.0" prefWidth="224.0" promptText="First name" />
+      <TextField layoutX="288.0" layoutY="74.0" prefHeight="25.0" prefWidth="224.0" promptText="Last name" />
+      <Button layoutX="126.0" layoutY="541.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="345.0" layoutY="541.0" mnemonicParsing="false" text="Abort" />
+   </children>
+</AnchorPane>

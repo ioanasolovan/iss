@@ -14,6 +14,7 @@ import services.IDonationServer;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -47,6 +48,7 @@ public class DonationServer implements IDonationServer {
         loggedClients = new HashMap<>();
         initialize();
         setSessionFactoryes();
+       // System.out.println(getAllDonorRequestsByUsername("dragos").size());
     }
 
     private void setSessionFactoryes()
@@ -133,5 +135,67 @@ public class DonationServer implements IDonationServer {
         } catch (RepositoryException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public Integer saveDonorRequestForm(DonorRequestForm form) {
+        try {
+            return donorRequuestForm.save(form);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<DonorRequestForm> getAllDonorRequestsByUsername(String username) {
+        try {
+            return donorRequuestForm.findDonorRequestbyUsername(username);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public Iterable<DonorRequestForm> getAllDonorRequests() {
+        try {
+            return donorRequuestForm.findAll();
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Iterable<Address> findAllAddresses()  {
+        try {
+            return addressRepository.findAll();
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Iterable<Donor> findAllDonors() {
+        try {
+            return donorRepository.findAll();
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Donor findDonor(String id) {
+        try {
+            return donorRepository.findOne(id);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

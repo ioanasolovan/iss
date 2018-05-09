@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.scene.input.MouseEvent;
 import observer.IAdministratorObserver;
 import service.AdminService;
 
@@ -39,4 +40,6 @@ public class DashboardController implements IAdministratorObserver {
     public void notifyAdmin() {
 
     }
+
+
 }

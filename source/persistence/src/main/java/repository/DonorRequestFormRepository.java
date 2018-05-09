@@ -1,7 +1,15 @@
 package repository;
 
 import domain.DonorRequestForm;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DonorRequestFormRepository extends AbstractRepository<Integer, DonorRequestForm> implements IRepository<Integer,DonorRequestForm>
 {
@@ -45,5 +53,12 @@ public class DonorRequestFormRepository extends AbstractRepository<Integer, Dono
     public void setFactory(SessionFactory factory)
     {
         super.setFactory(factory);
+    }
+
+
+    public List<DonorRequestForm> findDonorRequestbyUsername(String username) throws RepositoryException {
+      List<DonorRequestForm> lista = new ArrayList<>();
+        findAll().forEach(lista::add);
+        return lista.stream().filter(x->x.getUsername().equals(username)).collect(Collectors.toList());
     }
 }

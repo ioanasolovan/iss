@@ -18,7 +18,7 @@ import service.DonorClientService;
 import java.io.IOException;
 
 /**
- * 
+ *
  */
 public class AuthentificationController implements IDonationObserver {
     private DonorClientService donorClientService;
@@ -51,12 +51,9 @@ public class AuthentificationController implements IDonationObserver {
     private Button signupButton;
 
 
-
-
     public void setClientService(DonorClientService service) {
         donorClientService = service;
     }
-
 
 
     @Override
@@ -67,14 +64,38 @@ public class AuthentificationController implements IDonationObserver {
     public void login(ActionEvent actionEvent) {
         String username = this.usernameLoginText.getText();
         String password = this.passwordLoginText.getText();
-        boolean result = donorClientService.login(username,password);
+        boolean result = donorClientService.login(username, password);
 
-        if(!result){
+        if (!result) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Authentification request");
             alert.setHeaderText("Login failed");
             alert.setContentText("Incorect username / password");
             alert.show();
+        } else {
+
+
+            FXMLLoader loader;
+            Parent root = null;
+
+            loader = new FXMLLoader(getClass().getResource("/dashboard.fxml"));
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            DashboardController dash = loader.getController();
+            dash.setClientService(donorClientService);
+            dash.setUsername(username);
+
+            Stage primaryStage = new Stage();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+
+            primaryStage.show();
+
+            ((Stage)usernameLoginText.getScene().getWindow()).close();
         }
 
     }
@@ -85,7 +106,7 @@ public class AuthentificationController implements IDonationObserver {
         String email = emailText.getText();
         String firstname = firstnameText.getText();
         String lastname = lastnameText.getText();
-        Donor donor = new Donor(username,firstname,lastname,null,email,null,true,password,null);
+        Donor donor = new Donor(username, firstname, lastname, null, email, null, true, password, null);
 
         FXMLLoader loader;
         Parent root = null;
@@ -105,11 +126,13 @@ public class AuthentificationController implements IDonationObserver {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
 
-        primaryStage.setOnCloseRequest(event -> {
-            Platform.exit();
-            System.exit(0);
-        });
         primaryStage.show();
+
+
+    }
+
+    public void logout(ActionEvent actionEvent) {
+
 
 
     }

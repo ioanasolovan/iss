@@ -10,6 +10,10 @@ public class AbstractRepository<ID,T>
 {
     private SessionFactory factory;
 
+    public SessionFactory getFactory() {
+        return factory;
+    }
+
     protected AbstractRepository()
     {
 

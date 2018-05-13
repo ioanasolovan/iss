@@ -1,6 +1,7 @@
 package servers;
 
 import domain.Address;
+import domain.Doctor;
 import domain.Donor;
 import domain.DonorRequestForm;
 import org.hibernate.SessionFactory;
@@ -68,7 +69,7 @@ public class DonationServer implements IDonationServer {
     private void initialize() {
         // A SessionFactory is set up once for an application!
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.xml
+                .configure("hibernate.cfg.xml") // configures settings from hibernate.cfg.xml
                 .build();
         try {
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
@@ -84,6 +85,15 @@ public class DonationServer implements IDonationServer {
             try {
                 Donor donor = donorRepository.findOne( ((Donor) user).getUsername());
                 if(donor.getPassword().equals(((Donor) user).getPassword()))
+                    return true;
+            } catch (RepositoryException e) {
+                return false;
+            }
+        }
+        if(user instanceof Doctor){
+            try {
+                Doctor doctor = doctorRepository.findOne( ((Doctor) user).getUsername());
+                if(doctor.getPassword().equals(((Doctor) user).getPassword()))
                     return true;
             } catch (RepositoryException e) {
                 return false;
@@ -105,7 +115,14 @@ public class DonationServer implements IDonationServer {
                 return false;
             }
         }
-
+        if(user instanceof Doctor){
+            try {
+                doctorRepository.save((Doctor)user);
+                return true;
+            }catch (RepositoryException e){
+                return false;
+            }
+        }
         return false;
     }
 

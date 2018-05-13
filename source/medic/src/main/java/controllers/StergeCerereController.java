@@ -1,13 +1,14 @@
 package controllers;
 
-import observer.IMedicObserver;
+import observer.IDonationObserver;
 import service.DoctorClientService;
 
 /**
  * 
  */
-public class StergeCerereController implements IMedicObserver {
+public class StergeCerereController implements IDonationObserver {
 
+    private String username;
     /**
      * Default constructor
      */
@@ -40,4 +41,9 @@ public class StergeCerereController implements IMedicObserver {
     public void notifyMedic() {
 
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
 }

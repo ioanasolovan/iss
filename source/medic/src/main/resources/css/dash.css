@@ -1,0 +1,7 @@
+#side_button{
+    -fx-font-size: 13;
+}
+
+#side_button:hover{
+    -fx-text-fill: white;
+}

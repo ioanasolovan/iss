@@ -1,15 +1,22 @@
 package service;
 
 import domain.Doctor;
-import observer.IMedicObservable;
-import observer.IMedicObserver;
+import observer.IDonationObservable;
+import observer.IDonationObserver;
 import services.IDonationObserverServer;
 import services.IDonationServer;
 
+import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 /**
  * 
  */
-public class DoctorClientService implements IMedicObservable , IDonationObserverServer {
+public class DoctorClientService extends UnicastRemoteObject implements IDonationObservable, IDonationObserverServer, Serializable {
+    private IDonationServer server;
+
+    private Doctor user;
+
 
     @Override
     public void notifyFromServer() {
@@ -17,85 +24,57 @@ public class DoctorClientService implements IMedicObservable , IDonationObserver
     }
 
     @Override
-    public void addObserver(IMedicObserver observer) {
+    public void addObserver(IDonationObserver observer) {
 
     }
 
     @Override
-    public void removeObserver(IMedicObserver observer) {
+    public void removeObserver(IDonationObserver observer) {
 
     }
 
     @Override
-    public void notifyObservers() {
+    public void NotifyObservers() {
 
     }
 
-    /**
-     * Default constructor
-     */
-    public DoctorClientService() {
+
+    public DoctorClientService(IDonationServer server) throws RemoteException {
+        this.server = server;
     }
 
-    /**
-     * 
-     */
-    private IDonationServer server;
 
-    /**
-     * 
-     */
-    private Doctor user;
 
-    /**
-     * @param username 
-     * @param password 
-     * @return
-     */
-    public void login(String username, String password) {
-        // TODO implement here
-          }
+    public boolean login(String username, String password) {
+        Doctor doctor = new Doctor(username, password);
+        return server.login(doctor, this);
+    }
 
-    /**
-     * @param username 
-     * @param password 
-     * @return
-     */
-    public void register(String username, String password) {
-        // TODO implement here
+
+    public boolean register(String username, String password, String firstName, String lastName, String cnp) {
+        Doctor doctor = new Doctor(username, password, firstName, lastName, cnp);
+        return server.register(doctor);
 
     }
 
-    /**
-     * @return
-     */
     public void completeazaCerere() {
         // TODO implement here
 
     }
 
-    /**
-     * @param idCerere 
-     * @return
-     */
+
     public void stergeCerere(int idCerere) {
         // TODO implement here
 
     }
 
-    /**
-     * @param idMedic 
-     * @return
-     */
+
     public void veziStatus(int idMedic) {
         // TODO implement here
 
     }
 
-    /**
-     * @param idPacient 
-     * @return
-     */
+
     public void veziStatusPacient(int idPacient) {
         // TODO implement here
 

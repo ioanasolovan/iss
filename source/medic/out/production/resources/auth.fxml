@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AuthenticationController">
+   <children>
+      <Pane prefHeight="71.0" prefWidth="786.0" style="-fx-background-color: #fc3246;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0">
+         <children>
+            <TextField fx:id="usernameLoginText" layoutX="265.0" layoutY="23.0" promptText="Username" />
+            <PasswordField fx:id="passwordLoginText" layoutX="458.0" layoutY="23.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="667.0" layoutY="23.0" mnemonicParsing="false" onAction="#login" text="Log in" />
+         </children>
+      </Pane>
+      <Button fx:id="signupButton" layoutX="555.0" layoutY="405.0" mnemonicParsing="false" onAction="#register" text="Sign up" />
+      <TextField fx:id="usernameSignText" layoutX="455.0" layoutY="162.0" prefHeight="25.0" prefWidth="312.0" promptText="Username" />
+      <TextField fx:id="firstnameText" layoutX="452.0" layoutY="209.0" promptText="First name" />
+      <TextField fx:id="lastnameText" layoutX="616.0" layoutY="209.0" promptText="Last name" />
+      <PasswordField fx:id="passwordText" layoutX="452.0" layoutY="252.0" prefHeight="25.0" prefWidth="312.0" promptText="Password" />
+      <TextField fx:id="cnpText" layoutX="452.0" layoutY="294.0" prefHeight="25.0" prefWidth="312.0" promptText="Cnp" />
+      <Text layoutX="46.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood donation bla bla">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

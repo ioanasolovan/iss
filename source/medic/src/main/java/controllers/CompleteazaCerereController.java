@@ -1,13 +1,14 @@
 package controllers;
 
-import observer.IMedicObserver;
+import observer.IDonationObserver;
 import service.DoctorClientService;
 
 /**
  * 
  */
-public class CompleteazaCerereController implements IMedicObserver {
+public class CompleteazaCerereController implements IDonationObserver {
 
+    private String username;
     /**
      * Default constructor
      */
@@ -38,5 +39,10 @@ public class CompleteazaCerereController implements IMedicObserver {
         // TODO implement here
 
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
 
 }

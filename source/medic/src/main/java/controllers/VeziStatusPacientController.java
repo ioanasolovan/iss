@@ -1,13 +1,14 @@
 package controllers;
 
-import observer.IMedicObserver;
+import observer.IDonationObserver;
 import service.DoctorClientService;
 
 /**
  * 
  */
-public class VeziStatusPacientController implements IMedicObserver {
+public class VeziStatusPacientController implements IDonationObserver {
 
+    private String username;
     /**
      * Default constructor
      */
@@ -40,4 +41,8 @@ public class VeziStatusPacientController implements IMedicObserver {
     public void notifyMedic() {
 
     }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
 }

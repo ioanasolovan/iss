@@ -1,0 +1,18 @@
+.root{
+    -fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+
+
+}
+.text-input {
+   -fx-background-color: #615899;
+    -fx-text-fill: white;
+
+}
+.label{
+    -fx-text-fill: white;
+
+}
+.button{
+    -fx-background-color: #433b75;
+    -fx-text-fill: white;
+}

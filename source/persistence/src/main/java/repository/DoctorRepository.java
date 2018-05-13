@@ -3,7 +3,7 @@ package repository;
 import domain.Doctor;
 import org.hibernate.SessionFactory;
 
-public class DoctorRepository extends AbstractRepository<Integer, Doctor> implements IRepository<Integer, Doctor>
+public class DoctorRepository extends AbstractRepository<String, Doctor> implements IRepository<String, Doctor>
 {
 
 
@@ -14,15 +14,16 @@ public class DoctorRepository extends AbstractRepository<Integer, Doctor> implem
     }
 
     @Override
-    public Integer save(Doctor entity) throws RepositoryException
+    public String  save(Doctor entity) throws RepositoryException
     {
        return saveGeneric(entity);
     }
 
     @Override
-    public void delete(Integer integer) throws RepositoryException
+    public void delete(String string) throws RepositoryException
     {
-        deleteGeneric(new Doctor(integer));
+        Doctor doctor = findOne(string);
+        deleteGeneric(doctor);
     }
 
     @Override
@@ -32,9 +33,9 @@ public class DoctorRepository extends AbstractRepository<Integer, Doctor> implem
     }
 
     @Override
-    public Doctor findOne(Integer integer) throws RepositoryException
+    public Doctor findOne(String string) throws RepositoryException
     {
-        return findOneGeneric(integer, Doctor.class);
+        return findOneGeneric(string, Doctor.class);
     }
 
     @Override
